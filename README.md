@@ -15,9 +15,20 @@ link to the scraped data is [here](https://drive.google.com/drive/folders/1F4YVm
 - the index was connected and a function was made to preprocess a user's query
 - fuction was made to recommend products similar to the user's query
 - for some reason not known to me at this time this function does not work like it should but i hope to improve the code and make it work as intended
-  
-- tesseract and pytesseract was installed and integrated to perform Optical Character Recognition
-- to extract text from two images pillow was used to open the image
 
   ### Module 2
-  - 
+- tesseract and pytesseract was installed and integrated to perform Optical Character Recognition
+- to extract text from two images pillow was used to open the image
+- for the scraping, BeautifulSoup and selenium was used to scrape different products from 'https://www.newegg.com'
+- each product was opened, then the image was downloaded along with their titles then the next page was opened with a delay of 7sec, the images was downloaded for 10 different products then saved in a directory called download_image, which was later renamed to the stockcode in the CNN_Model_Train_Data.csv each served as the label for the cnn model
+  ### Module 3
+- the stockcode was used as the labels for the data, and a function was made to load and preprocess the data, all images was resized to 128x128 and normalized by dividing the converted RGB by 255. the images wand labels was stored
+- since the images was stored in a folder, that folder was uploaded to my drive and was accessed from there in colab for the training
+- the labels was encodedand at the end the label shape was 391x10
+- to build the model, tensorflow was used, relu was the activation function on max_pool of 2 and 2 dense layers was made
+- the model was compiled using adam optimzer, and for the loss, categorical_crossentropy was used
+- the data was split into 80% for training and 20 for testing for 10 epochs
+- the model performed with accuracy of 95% and for the validation, 70%
+- two images was given and used to make prediction on the model
+- to handle overfitting, Dropout was used 
+
