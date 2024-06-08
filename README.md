@@ -33,4 +33,4 @@ link to the scraped data is [here](https://drive.google.com/drive/folders/1F4YVm
 - to handle overfitting, Dropout was used
 
 ## Final note
-Thank you for the privilege to go through this vetting test i learnt a lot from it honestly, some of which is my first time using i really enjoyed every step even though i ony did all i could to attempt this, i hope to join you and improve myself better 
+Thank you for the privilege to go through this vetting test i learnt a lot from it honestly, some of which is my first time using i really enjoyed every step , i hope i get the opportunity to improve and do better.
