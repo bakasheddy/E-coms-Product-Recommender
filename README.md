@@ -30,5 +30,7 @@ link to the scraped data is [here](https://drive.google.com/drive/folders/1F4YVm
 - the data was split into 80% for training and 20 for testing for 10 epochs
 - the model performed with accuracy of 95% and for the validation, 70%
 - two images was given and used to make prediction on the model
-- to handle overfitting, Dropout was used 
+- to handle overfitting, Dropout was used
 
+## Final note
+Thank you for the privilege to go through this vetting test i learnt a lot from it honestly, some of which is my first time using i really enjoyed every step even though i ony did all i could to attempt this, i hope to join you and improve myself better 
