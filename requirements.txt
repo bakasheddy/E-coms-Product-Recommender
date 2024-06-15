@@ -1,0 +1,10 @@
+Flask
+numpy
+pandas
+Pillow
+tensorflow
+keras
+fasttext-wheel
+pinecone-client
+pytesseract
+scikit-learn
