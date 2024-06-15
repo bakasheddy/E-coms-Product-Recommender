@@ -9,9 +9,9 @@ link to the scraped data is [here](https://drive.google.com/drive/folders/1F4YVm
 - duplicates and NAN values that could not be helped was dropped and a clean_data was downloaded
   
 - pinecone was installed and access was granted using my api key
-- nltk was used to tokenize the 'Description' column and word2vec was used to create a word2vwc model from tokens generated
+- For product descriptions in an dataset, FastText was the best choice due to its ability to handle out-of-vocabulary words and the variability in product descriptions. It balances performance and computational efficiency well for this use case.
 - using the word2vec model a vector representations for each product description was created, the average the word vectors was taken and cases where no vectors were found was handled
-- the 'StockCode' feature was used as the products ids and a pincone index was created withe the name productvectors and cosine similarity was used for the matric because It efficiently captures the similarity between vectors while mitigating the effects of varying vector magnitudes.
+- the 'StockCode' feature was used as the products ids and a pincone index was created withe the name products and cosine similarity was used for the matric because It efficiently captures the similarity between vectors while mitigating the effects of varying vector magnitudes.
 - the index was connected and a function was made to preprocess a user's query
 - fuction was made to recommend products similar to the user's query
 - for some reason not known to me at this time this function does not work like it should but i hope to improve the code and make it work as intended
