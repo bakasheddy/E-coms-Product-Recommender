@@ -1,17 +1,16 @@
-# test
-
+E-coms Product Recommender
 link to the scraped data is [here](https://drive.google.com/drive/folders/1F4YVmGjnaF63L6JrsYvwAXVaeHd7ej5L?usp=drive_link)
 
 ### module 1
-- the data was loaded using pandas on google colab and local jupyter notebook and each feature was thoroughly examined for anomalys
-- regular expression was utilzedd for the cleaning on features which had repeated patterns of untidiness
-- features was converted to there appropriate data types
-- duplicates and NAN values that could not be helped was dropped and a clean_data was downloaded
+- The data was loaded using pandas on google colab and local jupyter notebook and each feature was thoroughly examined for anomalys
+- Regular expression was utilzedd for the cleaning on features which had repeated patterns of untidiness
+- Features was converted to there appropriate data types
+- Duplicates and NAN values that could not be helped was dropped and a clean_data was downloaded
   
-- pinecone was installed and access was granted using my api key
-- For product descriptions in an dataset, FastText was the best choice due to its ability to handle out-of-vocabulary words and the variability in product descriptions. It balances performance and computational efficiency well for this use case.
-- using the word2vec model a vector representations for each product description was created, the average the word vectors was taken and cases where no vectors were found was handled
-- the 'StockCode' feature was used as the products ids and a pincone index was created withe the name products and cosine similarity was used for the matric because It efficiently captures the similarity between vectors while mitigating the effects of varying vector magnitudes.
+- Pinecone was installed and access was granted using my api key
+- Given the nature of product descriptions inthe dataset, which often contain unique terms, brand names, and variations in spelling, FastText is generally the better choice for this task. Its ability to handle out-of-vocabulary words and generate embeddings based on subword information provides a significant advantage.
+- Using the fasttext model a vector representations for each product description was created.
+- The 'StockCode' feature was used as the products ids and a pincone index was created with the name 'products' and cosine similarity was used for the matric because It efficiently captures the similarity between vectors while mitigating the effects of varying vector magnitudes.
 - the index was connected and a function was made to preprocess a user's query
 - fuction was made to recommend products similar to the user's query
 - for some reason not known to me at this time this function does not work like it should but i hope to improve the code and make it work as intended
