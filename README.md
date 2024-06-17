@@ -31,5 +31,4 @@ link to the scraped image data is [here](https://drive.google.com/drive/folders/
 - Two images was given and used to make prediction on the model
 - To handle overfitting, Dropout was used
 
-## Final note
-Thank you for the privilege to go through this vetting test i learnt a lot from it honestly, some of which is my first time using i really enjoyed every step , i hope i get the opportunity to improve and do better.
+ 
