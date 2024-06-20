@@ -29,5 +29,7 @@ link to the scraped image data is [here](https://drive.google.com/drive/folders/
 - The data was split into 80% for training and 20 for testing for 10 epochs
 - The model performed with accuracy of 95% and for the validation, 70%
 - To handle overfitting, Dropout was used
-
+### Module 4
+- A streamlit app was built for 3 main types of query; a text query, an image query, and a product query
+- For the text query, the user may type a description of a product and get 10 product suggestions similar to their qury, for the image, the use can upload an image of a text which contains the description of a product, tesseract extracts this text and uses it as input for the query and the user gets 10 similar products as suggestions, then finally for the products, the user may upload a particular product, the CNN model detects which product was uploaded and gives out a label for this products, the labels used to train this model are ids for 10 different products but of course this can be improved later, after identifying the product, it's label which is an id is used to query pinecone for products with similar description and id
  
