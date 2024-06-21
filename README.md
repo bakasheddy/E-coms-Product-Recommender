@@ -1,5 +1,8 @@
 # E-coms Product Recommender
 
+## About
+This project involves the development of a comprehensive recommendation system for an e-commerce platform, integrating natural language processing, vector similarity search, and computer vision. FastText was utilized to embed product descriptions into vector representations, which were then indexed in Pinecone, a scalable and efficient vector database. Additionally, a CNN model was implemented to detect and classify products based on images, enhancing the recommendation capabilities. The system allows for querying these vectors with natural language inputs and image inputs, efficiently returning the top 3 similar products. This dual approach significantly improves the user experience by providing highly relevant product suggestions based on both text descriptions and visual content. The project demonstrates expertise in machine learning, NLP, computer vision, and scalable vector search technologies, showcasing the ability to create sophisticated and effective recommendation systems.
+
 link to the scraped image data is [here](https://drive.google.com/drive/folders/1F4YVmGjnaF63L6JrsYvwAXVaeHd7ej5L?usp=drive_link)
 
 ### module 1
