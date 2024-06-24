@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Welcome to the E-coms Product Explorer</h1>
+<p>Select a method to get product recommendations:</p>
+<ul>
+    <li><a href="{{ url_for('text_query') }}">Text Query Interface</a></li>
+    <li><a href="{{ url_for('image_query') }}">Image Query Interface</a></li>
+    <li><a href="{{ url_for('upload_image') }}">Product Image Upload Interface</a></li>
+</ul>
+{% endblock %}
