@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Text Query Interface</h1>
+<form action="{{ url_for('text_query') }}" method="post">
+    <input type="text" name="query" placeholder="Enter your query" required>
+    <button type="submit">Search</button>
+</form>
+{% if products %}
+    <h2>Top Products:</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Product ID</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in products %}
+            <tr>
+                <td>{{ product['Product ID'] }}</td>
+                <td>{{ product['Description'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Image Query Interface</h1>
+<form action="{{ url_for('image_query') }}" method="post" enctype="multipart/form-data">
+    <input type="file" name="image" accept="image/*" required>
+    <button type="submit">Upload</button>
+</form>
+{% if extracted_text %}
+    <h2>Extracted Text:</h2>
+    <p>{{ extracted_text }}</p>
+{% endif %}
+{% if products %}
+    <h2>Top Products:</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Product ID</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in products %}
+            <tr>
+                <td>{{ product['Product ID'] }}</td>
+                <td>{{ product['Description'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endif %}
+{% endblock %}

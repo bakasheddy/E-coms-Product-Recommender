@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Product Image Upload Interface</h1>
+<form action="{{ url_for('upload_image') }}" method="post" enctype="multipart/form-data">
+    <input type="file" name="image" accept="image/*" required>
+    <button type="submit">Upload</button>
+</form>
+{% if identified_product %}
+    <h2>Identified Product ID: {{ identified_product }}</h2>
+{% endif %}
+{% if related_products %}
+    <h2>Top Related Products:</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Product ID</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in related_products %}
+            <tr>
+                <td>{{ product['Product ID'] }}</td>
+                <td>{{ product['Description'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endif %}
+{% endblock %}
