@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Query</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Image Query Interface</h1>
+        <form action="{{ url_for('image_query') }}" method="post" enctype="multipart/form-data">
+            <label for="file">Upload an image:</label>
+            <input type="file" id="file" name="file" accept="image/*" required>
+            <button type="submit">Submit</button>
+        </form>
+        {% if extracted_text %}
+            <h2>Extracted Text: {{ extracted_text }}</h2>
+        {% endif %}
+        {% if products %}
+            <h2>Top Products:</h2>
+            <table>
+                <tr>
+                    <th>Product ID</th>
+                    <th>Description</th>
+                </tr>
+                {% for product in products %}
+                <tr>
+                    <td>{{ product['Product ID'] }}</td>
+                    <td>{{ product['Description'] }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        {% endif %}
+    </div>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
