@@ -5,6 +5,7 @@ This project involves the development of a comprehensive recommendation system f
 
 link to the scraped image data is [here](https://drive.google.com/drive/folders/1F4YVmGjnaF63L6JrsYvwAXVaeHd7ej5L?usp=drive_link)
 
+![image](ecoms.gif)
 ### module 1
 - The data was loaded using pandas and a customized output dataframe was provide after each feature was thoroughly examined for anomalys
 - Regular expression was utilzedd for the cleaning of features which had repeated patterns of untidiness
